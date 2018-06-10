@@ -12,6 +12,10 @@ public class Member implements Cloneable {
   public int[] scores;
   public Car car;
 
+  public Member(String name) {
+    this.name = name;
+  }
+
   @Override
   protected Object clone() throws CloneNotSupportedException {
     // 먼저 얕을 복사를 해서 name, age를 복제한다.

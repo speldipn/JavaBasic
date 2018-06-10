@@ -1,7 +1,5 @@
 package com.speldipn.example.this_is_java.ch11;
 
-import com.speldipn.example.this_is_java.ch11.arraysort.Member;
-import com.speldipn.example.this_is_java.ch11.arraysort.Member;
 
 import java.util.Arrays;
 
@@ -24,9 +22,9 @@ public class SearchExample {
     System.out.println("찾은 인덱스: " + index);
 
     // 객체 검색
-    com.speldipn.example.ch11.arraysort.Member m1 = new com.speldipn.example.ch11.arraysort.Member("홍길동");
-    com.speldipn.example.ch11.arraysort.Member m2 = new com.speldipn.example.ch11.arraysort.Member("박동수");
-    com.speldipn.example.ch11.arraysort.Member m3 = new com.speldipn.example.ch11.arraysort.Member("김민수");
+    Member m1 = new Member("홍길동");
+    Member m2 = new Member("박동수");
+    Member m3 = new Member("김민수");
     Member[] members = {m1, m2, m3};
     Arrays.sort(members);
     index = Arrays.binarySearch(members, m1);

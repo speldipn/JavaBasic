@@ -1,6 +1,6 @@
 package com.speldipn.example.fc_java.Inheritance.src.com.speldipn.inheritance;
 
-import com.speldipn.inheritance.another.NewParent;
+import com.speldipn.example.fc_java.Inheritance.src.com.speldipn.inheritance.another.NewParent;
 
 public class AccessModifier {
 

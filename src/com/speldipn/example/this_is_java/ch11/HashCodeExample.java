@@ -1,6 +1,7 @@
 package com.speldipn.example.this_is_java.ch11;
 
 import java.util.Objects;
+import com.speldipn.example.ch11.Student;
 
 /**
  * @Author: Oh, Joon young (speldipn)

@@ -1,4 +1,4 @@
-package com.speldipn.example.fc_java.StringReview.src.com.speldipn.stringreview;ㄴpackage com.speldipn.stringreview;
+package com.speldipn.example.fc_java.StringReview.src.com.speldipn.stringreview;
 
 public class StringMain {
 

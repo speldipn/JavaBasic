@@ -12,6 +12,16 @@ public class AnonymousRemote {
     public void turnOff() {
       System.out.println("TV를 끕니다.");
     }
+
+    @Override
+    public void setVolume(int volume) {
+
+    }
+
+    @Override
+    public void setMute(boolean mute) {
+
+    }
   };
 
   void method1() {
@@ -24,6 +34,16 @@ public class AnonymousRemote {
       @Override
       public void turnOff() {
         System.out.println("오디오를 끕니다.");
+      }
+
+      @Override
+      public void setVolume(int volume) {
+
+      }
+
+      @Override
+      public void setMute(boolean mute) {
+
       }
     };
     localVar.turnOn();

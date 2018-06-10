@@ -42,6 +42,16 @@ public class AnonymousExample {
       public void turnOff() {
         System.out.println("SmartTV를 끕니다.");
       }
+
+      @Override
+      public void setVolume(int volume) {
+
+      }
+
+      @Override
+      public void setMute(boolean mute) {
+
+      }
     });
   }
 }
