@@ -18,8 +18,9 @@ public class DaemonExample {
   }
 
   public static class AutoSaveThread extends Thread {
+    ThreadGroup threadGroup = Thread.currentThread().getThreadGroup();
     public void save() {
-      System.out.println("작업 내용을 저장함.");
+      System.out.println(threadGroup.getName() + "그룹 작업 내용을 저장함.");
     }
 
     @Override
