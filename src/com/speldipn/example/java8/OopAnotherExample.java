@@ -1,4 +1,4 @@
-package com.speldipn.example.this_is_java.java8;
+package com.speldipn.example.java8;
 
 /*
  * @author Oh, joon young (speldipn)

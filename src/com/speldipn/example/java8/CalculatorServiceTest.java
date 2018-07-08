@@ -1,4 +1,4 @@
-package com.speldipn.example.this_is_java.java8;
+package com.speldipn.example.java8;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -33,7 +33,7 @@ public class CalculatorServiceTest {
   @Test
   public void testCalculateDivision() throws Exception {
     CalculatorService service = new CalculatorService();
-    final int actual = service.calculate('/', 30, 0);
-    Assert.assertEquals(3, actual);
+    final int actual = service.calculate('/', 30, 5);
+    Assert.assertEquals(6, actual);
   }
 }
