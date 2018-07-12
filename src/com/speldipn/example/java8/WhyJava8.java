@@ -21,10 +21,15 @@ public class WhyJava8 {
     }
     System.out.println(sb);
 
-    // case 2
+    // case 2-1
     String result = numbers.stream()
                            .map(String::valueOf)
                            .collect(joining(" : "));
-    System.out.println(result);
+    System.out.println("result : " + result);
+
+    // case 2-2
+    Integer arr[] = {1, 2, 3, 4, 5};
+    String result2 = Arrays.stream(arr).map(String::valueOf).collect(joining(" : "));
+    System.out.println("result2 : " + result2);
   }
 }
