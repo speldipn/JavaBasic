@@ -7,7 +7,7 @@ package com.speldipn.example.this_is_java.ch12;
 public class CalcThread {
   public static void main(String[] args) {
     for (int i = 1; i <= 10; ++i) {
-      Thread th = new CalcThreadUnit("thread+" + i);
+      Thread th = new CalcThreadUnit("thread-" + i);
       if(i != 10) {
         th.setPriority(Thread.MIN_PRIORITY);
       } else {
@@ -27,7 +27,7 @@ public class CalcThread {
     public void run() {
       for (int i = 0; i < 2000000000; ++i) {
       }
-      System.out.println(this.getName() + "작업종료");
+      System.out.println(this.getName() + " 작업종료");
     }
   }
 }

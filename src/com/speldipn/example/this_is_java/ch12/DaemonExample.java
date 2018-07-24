@@ -33,6 +33,7 @@ public class DaemonExample {
         }
         save();
       }
+      System.out.println("대몬스레드 종료");
     }
   }
 }

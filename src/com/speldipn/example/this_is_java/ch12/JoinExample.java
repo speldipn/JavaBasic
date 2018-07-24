@@ -8,12 +8,13 @@ public class JoinExample {
   public static void main(String[] args) {
     SumThread sumThread = new SumThread();
     sumThread.start();
+
     try {
-      sumThread.join();
+//      sumThread.join();
+      System.out.println("1~100 합: " + sumThread.getSum());
     } catch (Exception e) {
       e.printStackTrace();
     }
-    System.out.println("1~100 합: " + sumThread.getSum());
   }
 
   static class SumThread extends Thread {

@@ -86,7 +86,7 @@ public class WaitNotify2Example {
     public void run() {
       for (int i = 1; i <= 3; ++i) {
         int data = dataBox.getData();
-        System.out.println("data - " + data);
+        System.out.println("[Consumer] getData - " + data);
         try {
           Thread.sleep(1000);
         } catch (InterruptedException e) {

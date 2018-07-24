@@ -14,8 +14,10 @@ public class ThreadInfoExample {
     autoSaveThread.setDaemon(true);
     autoSaveThread.start();
 
+    ///////////////////////////////////
     Map<Thread, StackTraceElement[]> map = Thread.getAllStackTraces();
     Set<Thread> threads = map.keySet();
+    ///////////////////////////////////
     for(Thread thread: threads) {
       System.out.println("Name: " + thread.getName() +
         ((thread.isDaemon() ? "(대몬)" : "(주)")));

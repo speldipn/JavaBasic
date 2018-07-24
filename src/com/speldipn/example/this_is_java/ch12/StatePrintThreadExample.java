@@ -5,21 +5,15 @@ package com.speldipn.example.this_is_java.ch12;
  * @Since: 2018-06-10
  */
 public class StatePrintThreadExample {
-  public static void main(String[] args) {
-    StatePrintThread thread = new StatePrintThread(new TargetThread());
-    thread.start();
-  }
-
   static class StatePrintThread extends Thread {
-    TargetThread targetThread;
+    Thread targetThread;
 
-    public StatePrintThread(TargetThread obj) {
+    public StatePrintThread(Thread obj) {
       this.targetThread = obj;
     }
 
     @Override
     public void run() {
-
       while(true) {
         State state = targetThread.getState();
         System.out.println("현재 쓰레드 상태: " + state);
@@ -30,11 +24,7 @@ public class StatePrintThreadExample {
           break;
         }
 
-        try {
-          Thread.sleep(500);
-        } catch (InterruptedException e) {
-          e.printStackTrace();
-        }
+        try { Thread.sleep(500); } catch (Exception e) {}
       }
     }
   }
@@ -42,13 +32,17 @@ public class StatePrintThreadExample {
   static class TargetThread extends Thread {
     @Override
     public void run() {
-      try {
-        Thread.sleep(1500);
-      } catch (InterruptedException e) {
-        e.printStackTrace();
-      }
-      // TIME_WAITED가 종료되고 RUNNABLE 상태가 출력되기 위해서
-      for(long i = 0; i < 1000000000L; ++i) {}
+      for(long i = 0; i < 5000000000L; ++i) {}
+
+      try { Thread.sleep(1500); } catch (Exception e) {}
+
+//       TIME_WAITED가 종료되고 RUNNABLE 상태가 출력되기 위해서
+      for(long i = 0; i < 5000000000L; ++i) {}
     }
+  }
+
+  public static void main(String[] args) {
+    StatePrintThread thread = new StatePrintThread(new TargetThread());
+    thread.start();
   }
 }
