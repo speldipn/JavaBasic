@@ -16,14 +16,16 @@
 * 단, '$'와 '_' 문자 허용
 * 한글이름도 사용가능하지만 가급적 한글을 포함하지 않는다
 
-## 정수 리터럴
+## 변수(Variable)
+
+### 정수 리터럴
 * byte
 * char
 * short
 * int
 * long
 
-## 실수 리터럴
+### 실수 리터럴
 * float
 * double
 ````java
@@ -31,7 +33,7 @@ System.out.println(5E2) // 5 x 10^2
 System.out.println(5E3) // 5 x 10^3
 ````
 
-## 문자 리터럴
+### 문자 리터럴
 ```` java
 System.out.println('A') // 'A'
 System.out.println('\n') // '\n'
@@ -39,15 +41,16 @@ System.out.println('\\') // '\\'
 ````
 * 문자 리터럴을 저장할 수 있는 타입은 char뿐이다
 
-## 문자열 리터럴
+### 문자열 리터럴
 ````java
 System.out.println("Hello World") // "Hello World"
 ````
 * 문자열 리터럴을 저장할 수 있는 타입은 String 타입뿐이다
 
 
-## 논리 리터럴
-* true (or) false
+### 논리 리터럴
+* true
+* false
 
 
 
