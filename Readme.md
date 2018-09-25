@@ -17,6 +17,8 @@
 * 한글이름도 사용가능하지만 가급적 한글을 포함하지 않는다
 
 ## 변수(Variable)
+* 변수는 선언된 블록 내에서만 사용이 가능하다
+
 
 ### 정수 리터럴
 * byte
@@ -36,8 +38,8 @@ System.out.println(5E3) // 5 x 10^3
 ### 문자 리터럴
 ```` java
 System.out.println('A') // 'A'
-System.out.println('\n') // '\n'
-System.out.println('\\') // '\\'
+System.out.println('\n') // 개행
+System.out.println('\\') // '\'
 ````
 * 문자 리터럴을 저장할 수 있는 타입은 char뿐이다
 
@@ -51,6 +53,14 @@ System.out.println("Hello World") // "Hello World"
 ### 논리 리터럴
 * true
 * false
+
+
+## 타입 변환
+### 자동(묵시적) 타입 변환
+* 작은 크기를 가지는 타입이 큰 크기를 가지는 타입에 저장될때 발생
+* 단, char는 2바이트지만 char 범위는 0 ~ 65535이므로 음수를 저장할 수 없다. 따라서 음수가 저장될 수 있는 byte타입을 char 타입으로 자동 변환할 수 없다.
+
+### 강제(명시적) 타입 변환
 
 
 
