@@ -95,7 +95,64 @@ char c2 = '1';
 char c3 = (char)(c2 + 1)
 ````
 
+### Infinity와 NaN(Not a Number)
+* 자바에서 Divide 0는 ArithmeticException를 발생시키고 프로그램을 종료하여 개발자에게 알려준다.
+* 0.0으로 / or % 을 하는 경우에는 Infinity or NaN가 되는데 이 상태에서는 추가적으로 연산한 값도 같은 결과를 가져오므로 주의가 필요하다.
+````java
+int x = 5;
+double y = 0.0;
 
+double z = x / y; 
+// double z = x % y;
 
+System.out.println(Double.isInfinite(z));
+System.out.println(Double.isNaN(z));
+
+System.out.println(z + 2);
+
+System.out.println(10/0); // Divide Zero이므로 ArithmeticException 발생!
+````
+
+### 비교문
+
+````java
+char ch = 'A';
+double d = 3.0;
+System.out.println(ch == 65) // 65 == 65
+System.out.println(3 == 3.0) // 3.0 == 3.0
+````
+* 문자는 숫자와 비교시 유니코드값으로 비교한다
+* int와 double 타입 비교시 double으로 변환되어 비교한다
+
+````java
+0.1 == 0.1F // false 
+````
+* 0.1F 이 double로 변환되어 비교되므로 true가 나올거 같지만 결과값은 false이다. 그 이유는 이진 포맷의 가수를 사용하는 모든 부동소수점 타입은 0.1을 정확히 표현할 수가 없다. 0.1F는 0.1보다 조금 더 큰값이다.
+* 위와 같은 상황을 피하려면 float로 캐스팅해서 비교하거나 int로 캐스팅해서 비교하면된다
+
+#### 비트 연산
+````java
+byte a = 10;
+byte b = 12;
+byte c = a & b; // compile error
+````
+* 비트 연산은 int로 변환되므로 연산 결과를 byte타입에 넣을 수 없다
+
+````java
+System.out.println(-8 >> 3); // MSB를 유지, -1
+System.out.println(-8 >>> 3); // MSB를 무조건 0으로 채움, 536870911
+````
+
+### Java 난수
+#### 1. Random 클래스
+````java
+Random random = new Random();
+System.out.println(random.nextInt(5)); // 0 ~ 4
+````
+
+#### 2. Math 클래스
+````java
+System.out.println(Math.random() * 5); // 0 ~ 4
+````
 
 ## 자바 기초 내용과 Java8관련된 예제코드 작성
