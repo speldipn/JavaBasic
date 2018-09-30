@@ -155,4 +155,18 @@ System.out.println(random.nextInt(5)); // 0 ~ 4
 System.out.println(Math.random() * 5); // 0 ~ 4
 ````
 
+### 키 입력
+````java
+System.in.read();
+````
+
+* read()메소는 하나의 키코드만 읽어들일 수 있고, 한번에 문자열은 읽어들일 수 없기때문에 아래 Scanner 클래스를 사용한다.
+
+````java
+Scanner scanner = new Scanner(System.in);
+````
+
+
+
+
 ## 자바 기초 내용과 Java8관련된 예제코드 작성
