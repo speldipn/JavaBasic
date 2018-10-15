@@ -6,29 +6,30 @@ import java.io.*;
  * @Author: Oh, Joon young (speldipn)
  * @Since: 2018-10-15
  */
-public class ByteFileCopy {
+public class BufferFileCopy {
     public static void main(String[] args) throws IOException {
-//        System.out.println(System.getProperty("user.dir"));
         InputStream in = new FileInputStream("org.avi");
         OutputStream out = new FileOutputStream("cpy.avi");
 
         int copyByte = 0;
-        int bData;
+        int readLen;
+        byte buf[] = new byte[1024];
 
         long prev = System.currentTimeMillis();
 
         while (true) {
-            bData = in.read();
-            if (bData == (-1))
+            readLen = in.read(buf);
+            if(readLen == (-1)) {
                 break;
-
-            out.write(bData);
-            ++copyByte;
+            }
+            out.write(buf, 0, readLen);
+            copyByte += readLen;
         }
 
         in.close();
         out.close();
-        System.out.println("복사된 바이크 크기 : " + copyByte);
+        System.out.println("복사된 바이트 크기 : " + copyByte);
         System.out.println("elapsed time : " + (System.currentTimeMillis() - prev)/1000 + "[sec]");
+
     }
 }
